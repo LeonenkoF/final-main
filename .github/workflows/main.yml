@@ -1,7 +1,6 @@
+
 name: project sprint 11
-on: 
-  push: 
-    branches: [ "main-iteration" ]
+on: push
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -15,7 +14,6 @@ jobs:
       - name: Vet
         run: |
           go vet ./...
-
   deploy:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
