@@ -1,7 +1,7 @@
 name: project sprint 11
 on: 
   push: 
-    branches: [ "main" ]
+    branches: [ "main-iteration" ]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -38,7 +38,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5.5.1
         with:
-          images: masteker/hello-golang
+          images: eqlent/final-main
 
       - name: Build and push Docker Inage
         uses: docker/build-push-action@v5
